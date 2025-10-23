@@ -162,6 +162,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 058f2af4c1183164496b15ef0f7f82ba
+    m_Address: Assets/Scenes/assets/terrain/terrainAssets/fireStand/materials/infernoStand_3.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 05a7252c341a57446b68dc2af03f58f4
     m_Address: Assets/Scenes/assets/models/Inferno/textures/yellowFlame/eyes/bake_frame_0020.png
     m_ReadOnly: 0
@@ -1162,6 +1167,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2ae93fb82e726bc438d31208431fe191
+    m_Address: Assets/Scenes/assets/terrain/terrainAssets/fireStand/materials/infernoStand_1.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 2aee627fd964e3a48b083ddf87d7a9fe
     m_Address: Assets/Scenes/assets/models/Inferno/textures/orangeFlame/base/bake_frame_0054.png
     m_ReadOnly: 0
@@ -1584,6 +1594,11 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 3ae960d325d26274e82d83b443ceef3f
     m_Address: Assets/Scenes/assets/models/Inferno/textures/orangeFlame/layer2/bake_frame_0019.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3b635e3645ae7614ba52fe0b630db032
+    m_Address: Assets/Scenes/assets/models/attacks/infernoSpell/materials/sp_mat2.mat
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -2474,6 +2489,11 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 6016d130cae6f2b4b95d5b60dc7146a0
     m_Address: Assets/Scenes/assets/models/Inferno/textures/yellowFlame/base/bake_frame_0092.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 60244602cab4b8644a56c98a9e222735
+    m_Address: Assets/Scenes/assets/terrain/terrainAssets/fireStand/materials/infernoStand_2.mat
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -4472,6 +4492,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ade97f4a480436d458db78d60d2a285a
+    m_Address: Assets/Scenes/assets/models/attacks/infernoSpell/materials/sp_mat3.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: adffa243f8a733b44b3764b01cf4ca88
     m_Address: Assets/Scenes/assets/models/Inferno/textures/yellowFlame/base/bake_frame_0070.png
     m_ReadOnly: 0
@@ -4914,6 +4939,11 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: c0430c0d534595e44886c85c78958583
     m_Address: Assets/Scenes/assets/models/Inferno/textures/orangeFlame/eyes/bake_frame_0023.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c043e01f4c545184db170753d73e726a
+    m_Address: Assets/Scenes/assets/sprites/tornado/fireMat.mat
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -6359,6 +6389,11 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: f4b2f7edf1f8d0c49ab6cc242a9a94cc
     m_Address: Assets/Scenes/assets/models/Inferno/textures/orangeFlame/base/bake_frame_0019.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f4f266eef47a70c4f8d452b07c7c17e6
+    m_Address: Assets/Scenes/assets/models/attacks/infernoSpell/materials/sp_mat1.mat
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
