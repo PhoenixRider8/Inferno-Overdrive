@@ -1,0 +1,88 @@
+import bpy
+import os
+
+# --- CONFIG ---
+output_dir = "N:/Game_Jams/2025/ApocalyseHorror3DJam/assets/blend files/3. Inferno/bake/textures/redFlame/eyes/"
+image_name = "bake_frame"
+bake_type = 'COMBINED'
+img_res = 2048  # Resolution of baked textures
+
+scene = bpy.context.scene
+frame_start = scene.frame_start
+frame_end = scene.frame_end
+
+# --- Setup ---
+os.makedirs(output_dir, exist_ok=True)
+scene.render.engine = 'CYCLES'
+scene.cycles.device = 'GPU'  # Change to 'CPU' if needed
+
+# Enable transparency in render settings
+scene.render.film_transparent = True   # <--- IMPORTANT!
+
+obj = bpy.context.active_object
+if not obj:
+    raise Exception("❌ No active object selected.")
+if not obj.active_material:
+    raise Exception("❌ Active object has no material.")
+
+mat = obj.active_material
+
+# Ensure object is selected and active
+bpy.ops.object.select_all(action='DESELECT')
+obj.select_set(True)
+bpy.context.view_layer.objects.active = obj
+
+# Find or create Image Texture node
+image_node = None
+for node in mat.node_tree.nodes:
+    if node.type == 'TEX_IMAGE':
+        image_node = node
+        break
+if not image_node:
+    image_node = mat.node_tree.nodes.new("ShaderNodeTexImage")
+    image_node.location = (300, 300)
+
+# --- Use default bake settings ---
+scene.render.bake.use_pass_direct = True
+scene.render.bake.use_pass_indirect = True
+scene.render.bake.use_pass_color = True
+
+# --- Bake loop ---
+for frame in range(frame_start, frame_end + 1):
+    scene.frame_set(frame)
+
+    # Create new transparent image
+    img = bpy.data.images.new(
+        f"{image_name}_{frame:04d}",
+        width=img_res,
+        height=img_res,
+        alpha=True,               # <--- Enable alpha channel
+        float_buffer=False
+    )
+
+    # Set to transparent background initially
+    img.generated_color = (0, 0, 0, 0)  # RGBA (black but fully transparent)
+
+    image_node.image = img
+
+    # Make the image node active and selected
+    for n in mat.node_tree.nodes:
+        n.select = False
+    image_node.select = True
+    mat.node_tree.nodes.active = image_node
+
+    # Perform bake
+    print(f"🟡 Baking frame {frame}...")
+    bpy.ops.object.bake(type=bake_type)
+
+    # Save result (ensure RGBA output)
+    filepath = os.path.join(output_dir, f"{image_name}_{frame:04d}.png")
+    img.filepath_raw = filepath
+    img.file_format = 'PNG'
+    img.save()
+    print(f"✅ Saved: {filepath}")
+
+    # Free the image to save memory
+    bpy.data.images.remove(img)
+
+print("🎉 All frames baked successfully with transparency!")
